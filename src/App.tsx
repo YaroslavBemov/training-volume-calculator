@@ -164,7 +164,7 @@ function App() {
         </Box>
         {/* <Divider /> */}
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-          <div style={{ textAlign: 'center', marginBottom: 15 }}>
+          <div style={{ textAlign: 'center', marginBottom: 20 }}>
             Примерное количество сетов в неделю на каждую группу мышц
           </div>
           <div style={{ fontSize: 25 }}>
