@@ -173,17 +173,7 @@ function App() {
         </Box>
 
 
-        {/* <IconButton
-          color="primary"
-          size="large"
-          sx={{
-            position: 'absolute',
-            bottom: 16,
-            right: 16
-          }}
-        >
-          <QuestionMarkIcon />
-        </IconButton> */}
+
 
         {/* <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}> */}
         {/* <SpeedDial
