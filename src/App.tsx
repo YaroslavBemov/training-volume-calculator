@@ -67,8 +67,10 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-
-        <ThemeButton />
+        
+        <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
+          <ThemeButton />
+        </Box>
 
         <Container maxWidth="sm">
 
