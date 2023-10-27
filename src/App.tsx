@@ -1,19 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
+import { Container } from '@mui/material'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
-import { Container } from '@mui/material'
 import { ColorModeContext, ThemeButton } from './ThemeButton'
-// import Divider from '@mui/material/Divider'
-// import SpeedDialIcon from '@mui/material/SpeedDialIcon'
-// import QuestionMarkIcon from '@mui/icons-material/QuestionMark'
-// import CloseIcon from '@mui/icons-material/Close'
-// import SpeedDial from '@mui/material/SpeedDial'
-// import SpeedDialAction from '@mui/material/SpeedDialAction'
+import HelpModal from './HelpModal'
+import './app.css'
 
 
 function App() {
@@ -67,12 +63,12 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        
-        <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
+
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <ThemeButton />
         </Box>
 
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" >
 
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1>TERENTEV<span style={{ color: 'yellow' }}>FIT</span></h1>
@@ -192,23 +188,17 @@ function App() {
           </Box>
 
 
-
-
-          {/* <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}> */}
-          {/* <SpeedDial
-            ariaLabel="SpeedDial basic example"
-            sx={{ position: 'absolute', bottom: 16, right: 16 }}
-            icon={<SpeedDialIcon openIcon={<CloseIcon />} />}
-          >
-            <SpeedDialAction
-            // key={action.name}
-            // icon={action.icon}
-            // tooltipTitle={action.name}
-            />
-          </SpeedDial> */}
-          {/* </Box> */}
-
         </Container>
+
+        <Box sx={{
+          // height: '100%',
+          display: 'flex',
+          justifyContent: 'flex-end',
+          // alignItems: 'flex-end'
+        }}>
+          <HelpModal />
+        </Box>
+
       </ThemeProvider >
     </ColorModeContext.Provider>
   )
