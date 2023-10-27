@@ -40,20 +40,58 @@ function App() {
   )
 
   const experienceChange = (event: SelectChangeEvent) => {
-    setExperience(event.target.value)
+    const experience = event.target.value
+    setExperience(experience)
+    localStorage.setItem('experience', experience)
   }
   const genderChange = (event: SelectChangeEvent) => {
-    setGender(event.target.value)
+    const gender = event.target.value
+    setGender(gender)
+    localStorage.setItem('gender', gender)
   }
   const lifestyleChange = (event: SelectChangeEvent) => {
-    setLifestyle(event.target.value)
+    const lifestyle = event.target.value
+    setLifestyle(lifestyle)
+    localStorage.setItem('lifestyle', lifestyle)
   }
   const balanceChange = (event: SelectChangeEvent) => {
-    setBalance(event.target.value)
+    const balance = event.target.value
+    setBalance(balance)
+    localStorage.setItem('balance', balance)
   }
   const frequencyChange = (event: SelectChangeEvent) => {
-    setFrequence(event.target.value)
+    const frequency = event.target.value
+    setFrequence(frequency)
+    localStorage.setItem('frequency', frequency)
   }
+
+  useEffect(() => {
+    const experience = localStorage.getItem('experience')
+    if (experience) {
+      setExperience(experience)
+    }
+
+    const gender = localStorage.getItem('gender')
+    if (gender) {
+      setGender(gender)
+    }
+
+    const lifestyle = localStorage.getItem('lifestyle')
+    if (lifestyle) {
+      setLifestyle(lifestyle)
+    }
+
+    const balance = localStorage.getItem('balance')
+    if (balance) {
+      setBalance(balance)
+    }
+
+    const frequency = localStorage.getItem('frequency')
+    if (frequency) {
+      setFrequence(frequency)
+    }
+
+  }, [])
 
   useEffect(() => {
     setSets(Math.round((+frequency * 5) * +lifestyle * +balance * Math.sqrt(+experience) + (+gender * 3)))
