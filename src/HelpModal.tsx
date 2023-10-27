@@ -24,7 +24,7 @@ export default function HelpModal() {
   const handleClose = () => setOpen(false)
 
   return (
-    <div style={{ margin: 16 }}>
+    <div>
       <Button variant='outlined' onClick={handleOpen}>Справка</Button>
       <Modal
         open={open}

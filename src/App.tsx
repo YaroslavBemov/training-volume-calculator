@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import { ColorModeContext, ThemeButton } from './ThemeButton'
 import HelpModal from './HelpModal'
-import './app.css'
+// import './app.css'
 
 
 function App() {
@@ -64,9 +64,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
 
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <ThemeButton />
-        </Box>
+        <Container maxWidth="sm">
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', m: 2 }}>
+            <HelpModal />
+            <ThemeButton />
+          </Box>
+        </Container>
 
         <Container maxWidth="sm" >
 
@@ -186,19 +189,7 @@ function App() {
               {sets}
             </div>
           </Box>
-
-
         </Container>
-
-        <Box sx={{
-          // height: '100%',
-          display: 'flex',
-          justifyContent: 'flex-end',
-          // alignItems: 'flex-end'
-        }}>
-          <HelpModal />
-        </Box>
-
       </ThemeProvider >
     </ColorModeContext.Provider>
   )
